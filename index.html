@@ -16,7 +16,6 @@ padding:20px;
 .container{
 max-width:420px;
 margin:auto;
-margin-top:20px;
 }
 
 .logo{
@@ -41,7 +40,7 @@ font-weight:900;
 }
 
 .upload{
-height:180px;
+height:160px;
 border:2px dashed #ddd;
 border-radius:16px;
 display:flex;
@@ -65,8 +64,14 @@ width:100%;
 padding:16px;
 border-radius:12px;
 border:1px solid #eee;
-margin-bottom:16px;
+margin-bottom:12px;
 font-size:16px;
+}
+
+.label{
+font-weight:600;
+margin-top:12px;
+margin-bottom:6px;
 }
 
 .btn{
@@ -77,6 +82,7 @@ padding:18px;
 border-radius:16px;
 text-align:center;
 font-weight:700;
+margin-top:20px;
 }
 </style>
 
@@ -98,15 +104,35 @@ Nettihinta
 
 <textarea class="input" placeholder="Kuvaus"></textarea>
 
+<div class="label">Kozmetik kunto (AI arvio)</div>
 <select class="select">
-<option>Kunto</option>
-<option>Uusi</option>
 <option>Hyvä</option>
+<option>Uusi</option>
 <option>Ok</option>
 </select>
 
+<div class="label">Toimiiko normaalisti?</div>
+<select class="select">
+<option>Kyllä</option>
+<option>Pieniä vikoja</option>
+<option>Ei toimi kunnolla</option>
+</select>
+
+<div class="label">Akku kunto</div>
+<select class="select">
+<option>Hyvä</option>
+<option>Heikko</option>
+<option>En tiedä</option>
+</select>
+
+<div class="label">Kaikki mukana?</div>
+<select class="select">
+<option>Kyllä</option>
+<option>Ei</option>
+</select>
+
 <div class="btn">
-Jatka
+Analysoi hinta
 </div>
 
 </div>
