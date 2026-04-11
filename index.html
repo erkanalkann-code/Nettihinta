@@ -16,21 +16,21 @@ padding:20px;
 .container{
 max-width:420px;
 margin:auto;
-margin-top:40px;
+margin-top:20px;
 }
 
 .logo{
 display:flex;
 align-items:center;
 gap:12px;
-font-size:28px;
+font-size:26px;
 font-weight:800;
-margin-bottom:40px;
+margin-bottom:20px;
 }
 
 .circle{
-width:42px;
-height:42px;
+width:40px;
+height:40px;
 background:black;
 color:white;
 border-radius:50%;
@@ -40,26 +40,43 @@ justify-content:center;
 font-weight:900;
 }
 
-.big-btn{
+.upload{
+height:180px;
+border:2px dashed #ddd;
+border-radius:16px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:16px;
+color:#666;
+}
+
+.input{
+width:100%;
+padding:16px;
+border-radius:12px;
+border:1px solid #eee;
+margin-bottom:12px;
+font-size:16px;
+}
+
+.select{
+width:100%;
+padding:16px;
+border-radius:12px;
+border:1px solid #eee;
+margin-bottom:16px;
+font-size:16px;
+}
+
+.btn{
 width:100%;
 background:black;
 color:white;
-padding:20px;
-border-radius:18px;
+padding:18px;
+border-radius:16px;
 text-align:center;
 font-weight:700;
-font-size:18px;
-margin-top:30px;
-}
-
-.menu{
-margin-top:40px;
-}
-
-.menu-item{
-padding:18px;
-border-bottom:1px solid #eee;
-font-weight:600;
 }
 </style>
 
@@ -73,13 +90,23 @@ font-weight:600;
 Nettihinta
 </div>
 
-<div class="big-btn">
-📷 Myy tavara
+<div class="upload">
+📷 Lataa kuva
 </div>
 
-<div class="menu">
-<div class="menu-item">Omat ilmoitukset</div>
-<div class="menu-item">Profiili</div>
+<input class="input" placeholder="Tuotteen nimi">
+
+<textarea class="input" placeholder="Kuvaus"></textarea>
+
+<select class="select">
+<option>Kunto</option>
+<option>Uusi</option>
+<option>Hyvä</option>
+<option>Ok</option>
+</select>
+
+<div class="btn">
+Jatka
 </div>
 
 </div>
