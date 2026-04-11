@@ -8,18 +8,18 @@
 <style>
 body{
 font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif;
-background:white;
+background:#f5f5f5;
 margin:0;
 }
 
 .header{
-display:flex;
-align-items:center;
-gap:10px;
+background:white;
 padding:16px;
 font-weight:800;
 font-size:22px;
-border-bottom:1px solid #eee;
+display:flex;
+gap:10px;
+align-items:center;
 }
 
 .circle{
@@ -31,33 +31,35 @@ border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-font-weight:900;
+}
+
+.card{
+background:white;
+margin:12px;
+padding:12px;
+border-radius:12px;
+display:flex;
+gap:10px;
 }
 
 .img{
-height:300px;
+width:70px;
+height:70px;
 background:#ddd;
-}
-
-.content{
-padding:16px;
+border-radius:8px;
 }
 
 .price{
-font-size:26px;
 font-weight:800;
-margin-bottom:5px;
 }
 
-.title{
+.total{
+background:white;
+margin:12px;
+padding:16px;
+border-radius:12px;
+font-weight:800;
 font-size:18px;
-font-weight:600;
-margin-bottom:10px;
-}
-
-.desc{
-color:#666;
-margin-bottom:20px;
 }
 
 .btn{
@@ -82,22 +84,30 @@ font-weight:700;
 Nettihinta
 </div>
 
+<div class="card">
 <div class="img"></div>
-
-<div class="content">
+<div>
+<div>Nike huppari</div>
 <div class="price">12€</div>
-<div class="title">Nike huppari</div>
-<div class="desc">
-Hyvä kuntoinen Nike huppari. Koko M. Ei reikiä tai tahroja.
+<div>Myyjä: Mikko</div>
+</div>
 </div>
 
-<div>Kunto: Hyvä</div>
-<div>Myyjä: Mikko</div>
+<div class="card">
+<div class="img"></div>
+<div>
+<div>IKEA lamppu</div>
+<div class="price">8€</div>
+<div>Myyjä: Laura</div>
+</div>
+</div>
 
+<div class="total">
+Yhteensä: 20€
 </div>
 
 <div class="btn">
-Lisää ostoskoriin
+Siirry maksamaan
 </div>
 
 </body>
