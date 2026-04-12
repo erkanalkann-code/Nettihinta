@@ -283,5 +283,82 @@ btn.style.color="white"
 
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+const card = document.querySelector(".card");
+
+const category = document.createElement("select");
+category.style.width="100%";
+category.style.padding="14px";
+category.style.borderRadius="12px";
+category.style.border="1px solid #ddd";
+category.style.marginBottom="12px";
+category.style.fontSize="16px";
+
+category.innerHTML = `
+<option>Tuote kategoria</option>
+<option>Yläosa</option>
+<option>Housut / Farkut</option>
+<option>Takki</option>
+<option>Kengät</option>
+<option>Laukku</option>
+<option>Mekko</option>
+`;
+
+const textarea = card.querySelector("textarea");
+card.insertBefore(category, textarea.nextSibling);
+
+const sizeContainer = document.querySelectorAll(".size")[0].parentNode;
+
+category.addEventListener("change", function(){
+
+const value = this.value;
+
+if(value==="Kengät"){
+sizeContainer.innerHTML = `
+<button class="size">36</button>
+<button class="size">37</button>
+<button class="size">38</button>
+<button class="size">39</button>
+<button class="size">40</button>
+<button class="size">41</button>
+<button class="size">42</button>
+<button class="size">43</button>
+<button class="size">44</button>
+<button class="size">45</button>
+`;
+}
+
+else if(value==="Laukku"){
+sizeContainer.innerHTML = `<div style="opacity:.5">Beden yok</div>`;
+}
+
+else{
+sizeContainer.innerHTML = `
+<button class="size">XS</button>
+<button class="size">S</button>
+<button class="size">M</button>
+<button class="size">L</button>
+<button class="size">XL</button>
+<button class="size">XXL</button>
+`;
+}
+
+document.querySelectorAll(".size").forEach(btn=>{
+btn.onclick=()=>{
+document.querySelectorAll(".size").forEach(b=>{
+b.style.background="#eee";
+b.style.color="black";
+});
+btn.style.background="black";
+btn.style.color="white";
+};
+});
+
+});
+
+});
+</script>
 </body>
 </html>
