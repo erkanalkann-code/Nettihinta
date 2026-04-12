@@ -371,5 +371,29 @@ textarea.placeholder = "Tuotteen tiedot (merkki, malli, koko...)";
 
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function(){
+
+// Beden -> Koko
+document.querySelectorAll("*").forEach(el=>{
+if(el.innerText === "Beden"){
+el.innerText = "Koko";
+}
+});
+
+// Dosyayı Seç -> Valitse kuva
+document.querySelectorAll("input[type='file']").forEach(input=>{
+input.previousSibling?.remove();
+
+const label = document.createElement("div");
+label.innerText = "Valitse kuva";
+label.style.fontWeight="600";
+label.style.marginBottom="6px";
+
+input.parentNode.insertBefore(label, input);
+});
+
+});
+</script>
 </body>
 </html>
