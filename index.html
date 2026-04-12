@@ -341,7 +341,8 @@ document.body.innerHTML = "Maksu onnistui"
 </script>
 <script>
 function pay(){
-
+if(window.locked) return;
+window.locked = true;
 document.body.innerHTML = `
 <div style="
 font-family:-apple-system;
