@@ -73,5 +73,13 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll("input[type='file']").forEach(input => {
+    input.setAttribute("accept", "image/*");
+    input.removeAttribute("capture");
+  });
+});
+</script>
 </body>
 </html>
