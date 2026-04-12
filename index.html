@@ -396,16 +396,25 @@ justify-content:center;
 color:#22c55e;
 font-size:34px;
 font-weight:700;
+animation:pop .4s ease;
 ">
 ✓
 </div>
 
-<div style="font-weight:600;margin-top:6px;">
+<div style="font-weight:700;margin-top:4px;">
 Tilaus: #NT${Math.floor(1000+Math.random()*9000)}
 </div>
-<div style="color:#666;margin-top:8px;">
+
+<div style="color:#666;margin-top:6px;">
 Tilauksesi on vahvistettu
 </div>
+
+<style>
+@keyframes pop{
+0%{transform:scale(.6);opacity:0}
+100%{transform:scale(1);opacity:1}
+}
+</style>
 
 <div onclick="location.reload()" style="
 margin-top:20px;
