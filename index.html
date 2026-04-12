@@ -147,5 +147,18 @@ document.querySelectorAll(".card img")[3].src =
     </button>
   </a>
 </div>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const buttons = document.querySelectorAll("button");
+
+  buttons.forEach(btn => {
+    if (btn.innerText.includes("Ota kuva ja myy")) {
+      btn.onclick = function() {
+        window.location.href = "sell.html";
+      };
+    }
+  });
+});
+</script>
 </body>
 </html>
