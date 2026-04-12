@@ -77,5 +77,34 @@ document.addEventListener("DOMContentLoaded", function() {
   document.body.appendChild(back);
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const back = document.createElement("div");
+  back.innerHTML = "←";
+  
+  back.style.position = "fixed";
+  back.style.top = "env(safe-area-inset-top, 16px)";
+  back.style.left = "12px";
+  back.style.width = "40px";
+  back.style.height = "40px";
+  back.style.background = "white";
+  back.style.borderRadius = "12px";
+  back.style.display = "flex";
+  back.style.alignItems = "center";
+  back.style.justifyContent = "center";
+  back.style.boxShadow = "0 4px 12px rgba(0,0,0,0.15)";
+  back.style.zIndex = "9999";
+  back.style.fontSize = "20px";
+  back.style.fontWeight = "bold";
+
+  back.onclick = function() {
+    window.location.href = "index.html";
+  };
+
+  document.body.appendChild(back);
+
+});
+</script>
 </body>
 </html>
