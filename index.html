@@ -339,3 +339,71 @@ document.body.innerHTML = "Maksu onnistui"
 
 }
 </script>
+<script>
+function pay(){
+
+document.body.innerHTML = `
+<div style="
+font-family:-apple-system;
+background:#f5f5f5;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+">
+
+<div>Maksetaan...</div>
+
+</div>
+`
+
+setTimeout(()=>{
+
+document.body.innerHTML = `
+<div style="
+font-family:-apple-system;
+background:#f5f5f5;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+">
+
+<div style="
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+width:80%;
+max-width:400px;
+">
+
+<div style="font-size:24px;font-weight:700;">
+Maksu onnistui
+</div>
+
+<div style="color:#666;margin-top:8px;">
+Tilauksesi on vahvistettu
+</div>
+
+<div onclick="location.reload()" style="
+margin-top:20px;
+background:black;
+color:white;
+padding:14px;
+border-radius:12px;
+font-weight:600;
+">
+Palaa etusivulle
+</div>
+
+</div>
+</div>
+`
+
+},900)
+
+}
+</script>
