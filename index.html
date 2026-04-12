@@ -1,27 +1,76 @@
-<div style="
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+font-family: -apple-system, Arial;
+background:#f5f5f5;
+margin:0;
+}
+
+.card{
 background:white;
 margin:16px;
 padding:16px;
-border-radius:12px;
-">
+border-radius:16px;
+}
 
-<div style="display:flex;justify-content:space-between;font-weight:600">
+.row{
+display:flex;
+justify-content:space-between;
+margin-top:8px;
+}
+
+.total{
+font-weight:800;
+font-size:20px;
+margin-top:12px;
+display:flex;
+justify-content:space-between;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="row">
+<div>Tuotteet</div>
+<div>24€</div>
+</div>
+
+<div class="row">
+<div>Palvelumaksu</div>
+<div>3€</div>
+</div>
+
+<div class="row" style="font-weight:600;margin-top:12px;">
 <div>Toimitus</div>
 <div>6.50€</div>
 </div>
 
-<div style="margin-top:8px;color:#666;font-size:14px">
+<div style="color:#666;font-size:14px;margin-top:6px">
 
-<div style="display:flex;justify-content:space-between">
+<div class="row">
 <div>Mikko (2 tuotetta)</div>
 <div>3.50€</div>
 </div>
 
-<div style="display:flex;justify-content:space-between;margin-top:4px">
+<div class="row">
 <div>Laura (1 tuote)</div>
 <div>3.00€</div>
 </div>
 
 </div>
 
+<div class="total">
+<div>Yhteensä</div>
+<div>33.50€</div>
 </div>
+
+</div>
+
+</body>
+</html>
