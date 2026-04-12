@@ -630,5 +630,38 @@ reader.readAsDataURL(file);
 
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const input = document.querySelector("input[type='file']");
+const button = document.querySelector("button");
+
+if(!input || !button) return;
+
+input.addEventListener("change", function(){
+
+const file = input.files[0];
+if(!file) return;
+
+const reader = new FileReader();
+
+reader.onload = function(e){
+
+button.style.backgroundImage = `url(${e.target.result})`;
+button.style.backgroundSize = "cover";
+button.style.backgroundPosition = "center";
+button.style.color = "white";
+button.style.height = "160px";
+
+button.innerText = "";
+
+};
+
+reader.readAsDataURL(file);
+
+});
+
+});
+</script>
 </body>
 </html>
