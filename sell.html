@@ -557,5 +557,44 @@ reader.readAsDataURL(file);
 
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const input = document.querySelector("input[type='file']");
+if(!input) return;
+
+// preview container
+const previewBox = document.createElement("div");
+previewBox.style.marginBottom = "12px";
+
+const img = document.createElement("img");
+img.style.width = "100%";
+img.style.borderRadius = "16px";
+img.style.display = "none";
+
+previewBox.appendChild(img);
+
+// Valitse kuva kutusunun ÜSTÜNE ekle
+const card = input.closest("div").parentElement;
+card.insertBefore(previewBox, card.children[1]);
+
+input.addEventListener("change", function(e){
+
+const file = e.target.files[0];
+if(!file) return;
+
+const reader = new FileReader();
+
+reader.onload = function(ev){
+img.src = ev.target.result;
+img.style.display = "block";
+};
+
+reader.readAsDataURL(file);
+
+});
+
+});
+</script>
 </body>
 </html>
