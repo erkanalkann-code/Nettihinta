@@ -557,6 +557,16 @@ reader.readAsDataURL(file);
 
 });
 </script>
-  
+  <script>
+document.querySelectorAll("script").forEach(s=>{
+if(s.innerHTML.includes("FileReader") ||
+   s.innerHTML.includes("preview") ||
+   s.innerHTML.includes("multiple") ||
+   s.innerHTML.includes("createObjectURL"))
+{
+s.remove();
+}
+});
+</script>
 </body>
 </html>
