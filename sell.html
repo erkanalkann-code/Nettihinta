@@ -154,5 +154,58 @@ button.parentNode.insertBefore(select, button);
 
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+const nameInput = document.querySelector("input[type='text']");
+const select = document.getElementById("sizeSelect");
+
+nameInput.addEventListener("input", function(){
+
+const value = this.value.toLowerCase();
+
+if(value.includes("kenkä")){
+select.innerHTML = `
+<option>Koko</option>
+<option>36</option>
+<option>37</option>
+<option>38</option>
+<option>39</option>
+<option>40</option>
+<option>41</option>
+<option>42</option>
+<option>43</option>
+<option>44</option>
+<option>45</option>
+`;
+}
+
+else if(
+value.includes("takki") ||
+value.includes("paita") ||
+value.includes("farkut") ||
+value.includes("housut") ||
+value.includes("shirt") ||
+value.includes("pants")
+){
+select.innerHTML = `
+<option>Beden</option>
+<option>XS</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>XXL</option>
+`;
+}
+
+else{
+select.innerHTML = `<option>Beden seç</option>`;
+}
+
+});
+
+});
+</script>
 </body>
 </html>
