@@ -186,6 +186,14 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
-  
+  <script>
+window.addEventListener("load", function() {
+  document.querySelectorAll("body > div").forEach(el => {
+    if (el.innerText.includes("←")) {
+      el.remove();
+    }
+  });
+});
+</script>
 </body>
 </html>
