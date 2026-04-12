@@ -152,5 +152,25 @@ window.onpopstate = function () {
   window.location.href = "index.html";
 };
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const all = document.querySelectorAll("body *");
+
+  all.forEach(el => {
+    const text = el.textContent.trim();
+    const style = window.getComputedStyle(el);
+
+    if (
+      text === "←" ||
+      text === "← Takaisin" ||
+      (style.position === "fixed" && style.top === "0px")
+    ) {
+      el.style.display = "none";
+    }
+  });
+
+});
+</script>
 </body>
 </html>
