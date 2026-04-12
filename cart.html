@@ -109,5 +109,12 @@ document.querySelector('.item').style.display='none'
 document.querySelector('.total').innerText='Kori on tyhjä'
 }
 </script>
+  <script>
+const total = localStorage.getItem("cartTotal");
+
+if(!total){
+document.querySelector(".buy").style.display = "none";
+}
+</script>
 </body>
 </html>
