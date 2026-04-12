@@ -663,5 +663,50 @@ reader.readAsDataURL(file);
 
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const input = document.querySelector("input[type='file']");
+if(!input) return;
+
+input.setAttribute("multiple","true");
+
+const gallery = document.createElement("div");
+gallery.style.display="grid";
+gallery.style.gridTemplateColumns="repeat(3,1fr)";
+gallery.style.gap="8px";
+gallery.style.marginTop="10px";
+
+input.parentNode.appendChild(gallery);
+
+input.addEventListener("change", function(){
+
+gallery.innerHTML="";
+
+[...input.files].forEach(file=>{
+
+const reader = new FileReader();
+
+reader.onload = function(e){
+
+const img = document.createElement("img");
+img.src = e.target.result;
+img.style.width="100%";
+img.style.borderRadius="10px";
+img.style.height="100px";
+img.style.objectFit="cover";
+
+gallery.appendChild(img);
+
+};
+
+reader.readAsDataURL(file);
+
+});
+
+});
+
+});
+</script>
 </body>
 </html>
