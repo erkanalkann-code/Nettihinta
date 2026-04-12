@@ -92,8 +92,6 @@ Maksa
 
 <script>
 function pay(){
-if(window.locked) return;
-window.locked = true;
 
 document.body.innerHTML = `
 <div style="
@@ -115,7 +113,7 @@ width:80%;
 max-width:400px;
 ">
 
-<div style="font-size:24px;font-weight:700">
+<div style="font-size:24px;font-weight:700;">
 Maksu onnistui
 </div>
 
@@ -139,16 +137,24 @@ font-weight:700;
 Tilaus: #NT${Math.floor(1000+Math.random()*9000)}
 </div>
 
-
-
-
 <div style="color:#666;margin-top:6px;">
 Tilauksesi on vahvistettu
 </div>
 
-<div onclick="window.location.href='/'" style="margin-top:20px;background:black;color:white;padding:16px;border-radius:14px;font-weight:600;text-align:center;">
+<div onclick="window.location.href='/'" style="
+margin-top:20px;
+background:black;
+color:white;
+padding:16px;
+border-radius:14px;
+font-weight:600;
+text-align:center;
+">
 Palaa etusivulle
 </div>
 
+</div>
+</div>
+`;
 }
 </script>
