@@ -495,5 +495,34 @@ preview.style.display = "block";
 
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const input = document.querySelector("input[type='file']");
+if(!input) return;
+
+const box = input.closest("div");
+const parent = box.parentNode;
+
+const preview = document.createElement("img");
+preview.style.width = "100%";
+preview.style.borderRadius = "16px";
+preview.style.marginBottom = "12px";
+preview.style.display = "none";
+
+parent.insertBefore(preview, box);
+
+input.addEventListener("change", function(){
+
+const file = input.files[0];
+if(!file) return;
+
+preview.src = URL.createObjectURL(file);
+preview.style.display = "block";
+
+});
+
+});
+</script>
 </body>
 </html>
