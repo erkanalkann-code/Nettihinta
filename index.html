@@ -167,7 +167,9 @@ to{stroke-dashoffset:0}
 to{stroke-dashoffset:0}
 }
 </style>
-Tilaus: #NT1023
+<div style="font-weight:600;margin-bottom:20px">
+Tilaus: <span id="orderNo"></span>
+</div>
 </div>
 
 <div onclick="location.reload()" style="
@@ -188,4 +190,8 @@ Palaa etusivulle
 },1000)
 
 }
+</script>
+<script>
+const order = "NT" + Math.floor(1000 + Math.random()*9000)
+document.getElementById("orderNo").innerText = "#" + order
 </script>
