@@ -65,5 +65,13 @@ color:black;
 </div>
 
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll("input[type='file']").forEach(input => {
+    input.setAttribute("accept", "image/*");
+    input.setAttribute("capture", "environment");
+  });
+});
+</script>
 </body>
 </html>
