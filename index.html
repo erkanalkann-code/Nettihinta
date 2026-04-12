@@ -15,11 +15,11 @@ margin:0;
 .header{
 background:white;
 padding:16px;
-display:flex;
-align-items:center;
-gap:10px;
 font-weight:800;
 font-size:22px;
+display:flex;
+gap:10px;
+align-items:center;
 }
 
 .circle{
@@ -35,33 +35,34 @@ justify-content:center;
 
 .card{
 background:white;
-margin:16px;
-padding:18px;
-border-radius:16px;
+margin:12px;
+padding:12px;
+border-radius:12px;
+display:flex;
+gap:10px;
 }
 
-.big{
-font-size:28px;
-font-weight:800;
-margin-top:5px;
-}
-
-.small{
-color:#666;
-margin-top:6px;
-}
-
-.divider{
-height:1px;
-background:#eee;
-margin:14px 0;
+.img{
+width:70px;
+height:70px;
+background:#ddd;
+border-radius:8px;
 }
 
 .row{
 display:flex;
 justify-content:space-between;
-margin-top:8px;
-color:#666;
+margin:12px;
+font-weight:600;
+}
+
+.total{
+background:white;
+margin:12px;
+padding:16px;
+border-radius:12px;
+font-weight:800;
+font-size:18px;
 }
 
 .btn{
@@ -83,37 +84,57 @@ font-weight:700;
 
 <div class="header">
 <div class="circle">N</div>
-Nettihinta
+Ostoskori
 </div>
 
 <div class="card">
+<div class="img"></div>
+<div>
+<div>Nike huppari</div>
+<div>Myyjä: Mikko</div>
+<div>10€</div>
+</div>
+</div>
 
-<div>Myyntihinta</div>
-<div class="big">15€</div>
-<div class="small">Toimitus sisältyy hintaan</div>
+<div class="card">
+<div class="img"></div>
+<div>
+<div>Adidas housut</div>
+<div>Myyjä: Mikko</div>
+<div>8€</div>
+</div>
+</div>
 
-<div class="divider"></div>
+<div class="card">
+<div class="img"></div>
+<div>
+<div>Kirja</div>
+<div>Myyjä: Laura</div>
+<div>6€</div>
+</div>
+</div>
 
 <div class="row">
-<div>Toimitus</div>
-<div>-3€</div>
+<div>Tuotteet</div>
+<div>24€</div>
 </div>
 
 <div class="row">
 <div>Palvelumaksu</div>
-<div>-1€</div>
+<div>3€</div>
 </div>
 
-<div class="divider"></div>
+<div class="row">
+<div>Toimitus</div>
+<div>6.50€</div>
+</div>
 
-<div>Saat rahasi</div>
-<div class="big">11€</div>
-<div class="small">Maksetaan kun tuote on myyty</div>
-
+<div class="total">
+Yhteensä: 33.50€
 </div>
 
 <div class="btn">
-Julkaise myyntiin
+Maksa
 </div>
 
 </body>
