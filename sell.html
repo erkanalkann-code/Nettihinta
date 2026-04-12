@@ -395,5 +395,45 @@ input.parentNode.insertBefore(label, input);
 
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const fileInput = document.querySelector("input[type='file']");
+if(!fileInput) return;
+
+fileInput.style.display = "none";
+
+const wrapper = document.createElement("div");
+wrapper.style.border="1px solid #ddd";
+wrapper.style.borderRadius="16px";
+wrapper.style.padding="14px";
+wrapper.style.background="white";
+
+const button = document.createElement("button");
+button.innerText = "Valitse kuva";
+button.style.background="#eee";
+button.style.border="none";
+button.style.padding="8px 12px";
+button.style.borderRadius="10px";
+button.style.fontWeight="600";
+
+const text = document.createElement("span");
+text.innerText = " Ei valittua kuvaa";
+text.style.marginLeft="10px";
+
+button.onclick = () => fileInput.click();
+
+fileInput.addEventListener("change", function(){
+text.innerText = fileInput.files.length
+? " " + fileInput.files[0].name
+: " Ei valittua kuvaa";
+});
+
+wrapper.appendChild(button);
+wrapper.appendChild(text);
+
+fileInput.parentNode.insertBefore(wrapper, fileInput);
+});
+</script>
 </body>
 </html>
