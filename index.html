@@ -160,5 +160,11 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const fixedButtons = document.querySelectorAll("div[style*='position:fixed']");
+  fixedButtons.forEach(el => el.style.display = "none");
+});
+</script>
 </body>
 </html>
