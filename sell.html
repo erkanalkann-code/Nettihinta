@@ -106,5 +106,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const header = document.createElement("div");
+  header.style.display = "flex";
+  header.style.alignItems = "center";
+  header.style.gap = "10px";
+  header.style.marginBottom = "10px";
+
+  const back = document.createElement("button");
+  back.innerText = "← Takaisin";
+  back.style.border = "none";
+  back.style.background = "none";
+  back.style.fontSize = "16px";
+  back.style.fontWeight = "600";
+
+  back.onclick = function() {
+    window.location.href = "index.html";
+  };
+
+  header.appendChild(back);
+
+  document.body.insertBefore(header, document.body.firstChild);
+
+});
+</script>
 </body>
 </html>
