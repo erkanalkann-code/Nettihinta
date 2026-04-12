@@ -4,24 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nettihinta</title>
-
 <style>
 body{
 font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif;
 background:#f5f5f5;
 margin:0;
 }
-
 .header{
 background:white;
 padding:16px;
+display:flex;
+align-items:center;
+gap:10px;
 font-weight:800;
 font-size:22px;
-display:flex;
-gap:10px;
-align-items:center;
 }
-
 .circle{
 width:34px;
 height:34px;
@@ -32,36 +29,26 @@ display:flex;
 align-items:center;
 justify-content:center;
 }
-
 .card{
 background:white;
-margin:12px;
-padding:12px;
-border-radius:12px;
-display:flex;
-gap:10px;
+margin:16px;
+padding:18px;
+border-radius:16px;
 }
-
-.img{
-width:70px;
-height:70px;
-background:#ddd;
-border-radius:8px;
-}
-
-.price{
+.big{
+font-size:28px;
 font-weight:800;
+margin-top:5px;
 }
-
-.total{
-background:white;
-margin:12px;
-padding:16px;
-border-radius:12px;
-font-weight:800;
-font-size:18px;
+.small{
+color:#666;
+margin-top:6px;
 }
-
+.divider{
+height:1px;
+background:#eee;
+margin:14px 0;
+}
 .btn{
 position:fixed;
 bottom:20px;
@@ -75,7 +62,6 @@ text-align:center;
 font-weight:700;
 }
 </style>
-
 </head>
 <body>
 
@@ -85,29 +71,19 @@ Nettihinta
 </div>
 
 <div class="card">
-<div class="img"></div>
-<div>
-<div>Nike huppari</div>
-<div class="price">12€</div>
-<div>Myyjä: Mikko</div>
-</div>
-</div>
+<div>Myyntihinta</div>
+<div class="big">15€</div>
+<div class="small">Toimitus sisältyy hintaan</div>
 
-<div class="card">
-<div class="img"></div>
-<div>
-<div>IKEA lamppu</div>
-<div class="price">8€</div>
-<div>Myyjä: Laura</div>
-</div>
-</div>
+<div class="divider"></div>
 
-<div class="total">
-Yhteensä: 20€
+<div>Saat rahasi</div>
+<div class="big">11€</div>
+<div class="small">Maksetaan kun tuote on myyty</div>
 </div>
 
 <div class="btn">
-Siirry maksamaan
+Julkaise myyntiin
 </div>
 
 </body>
