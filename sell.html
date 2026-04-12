@@ -55,6 +55,27 @@ font-weight:600;
 <button>Arvioi hinta</button>
 
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const back = document.createElement("button");
+  back.innerText = "← Takaisin";
+  
+  back.style.position = "fixed";
+  back.style.top = "16px";
+  back.style.left = "16px";
+  back.style.padding = "10px 14px";
+  back.style.borderRadius = "12px";
+  back.style.border = "none";
+  back.style.background = "white";
+  back.style.boxShadow = "0 2px 8px rgba(0,0,0,0.1)";
+  back.style.fontWeight = "600";
 
+  back.onclick = function() {
+    window.location.href = "index.html";
+  };
+
+  document.body.appendChild(back);
+});
+</script>
 </body>
 </html>
