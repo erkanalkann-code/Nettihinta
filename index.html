@@ -89,7 +89,6 @@ Maksa
 </div>
 
 <script>
-<script>
 function pay(){
 
 document.body.innerHTML = `
@@ -103,23 +102,15 @@ justify-content:center;
 flex-direction:column;
 ">
 
-<div style="
-background:white;
-padding:30px;
-border-radius:20px;
-text-align:center;
-width:80%;
-max-width:400px;
-">
-
-<div style="font-size:18px;font-weight:600">
-Maksu käsitellään...
+<div style="font-size:18px;color:#666">
+Maksetaan...
 </div>
 
 </div>
+`
 
-</div>
 setTimeout(()=>{
+
 document.body.innerHTML = `
 <div style="
 font-family:-apple-system;
@@ -147,9 +138,12 @@ Maksu onnistui
 <div style="color:#666">
 Tilauksesi on vahvistettu
 </div>
+
 </div>
 </div>
 `
+
 },1000)
+
 }
 </script>
