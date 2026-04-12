@@ -142,5 +142,17 @@ select.innerHTML = `<option>Beden seç</option>`;
 
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+const select = document.getElementById("sizeSelect");
+const button = document.querySelector("button");
+
+if(select && button){
+button.parentNode.insertBefore(select, button);
+}
+
+});
+</script>
 </body>
 </html>
