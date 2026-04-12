@@ -166,5 +166,19 @@ document.addEventListener("DOMContentLoaded", function() {
   fixedButtons.forEach(el => el.style.display = "none");
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll("*");
+
+  elements.forEach(el => {
+    if (el.textContent.trim() === "Ota kuva ja myy") {
+      el.style.cursor = "pointer";
+      el.addEventListener("click", function() {
+        window.location.href = "sell.html";
+      });
+    }
+  });
+});
+</script>
 </body>
 </html>
