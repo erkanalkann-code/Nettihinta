@@ -103,5 +103,11 @@ document.body.appendChild(back)
   <script>
 document.querySelector('.header').style.paddingLeft='110px'
 </script>
+  <script>
+if(!localStorage.getItem('cart')){
+document.querySelector('.item').style.display='none'
+document.querySelector('.total').innerText='Kori on tyhjä'
+}
+</script>
 </body>
 </html>
