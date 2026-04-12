@@ -435,5 +435,37 @@ wrapper.appendChild(text);
 fileInput.parentNode.insertBefore(wrapper, fileInput);
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const input = document.querySelector("input[type='file']");
+if(!input) return;
+
+const preview = document.createElement("img");
+preview.style.width = "100%";
+preview.style.borderRadius = "12px";
+preview.style.marginTop = "10px";
+preview.style.display = "none";
+
+input.parentNode.appendChild(preview);
+
+input.addEventListener("change", function(){
+
+const file = input.files[0];
+if(!file) return;
+
+const reader = new FileReader();
+
+reader.onload = function(e){
+preview.src = e.target.result;
+preview.style.display = "block";
+};
+
+reader.readAsDataURL(file);
+
+});
+
+});
+</script>
 </body>
 </html>
