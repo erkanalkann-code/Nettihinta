@@ -171,6 +171,13 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 });
+</script><script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll("[style*='position: fixed']").forEach(el=>{
+    if(el.innerText.includes("←")) el.remove();
+  });
+});
 </script>
+  
 </body>
 </html>
