@@ -145,5 +145,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 </script>
+  <script>
+history.pushState({}, "", "");
+
+window.onpopstate = function () {
+  window.location.href = "index.html";
+};
+</script>
 </body>
 </html>
