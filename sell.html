@@ -708,5 +708,50 @@ reader.readAsDataURL(file);
 
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const input = document.querySelector("input[type='file']");
+if(!input) return;
+
+// çoklu foto
+input.multiple = true;
+input.accept = "image/*";
+
+// preview container
+let preview = document.getElementById("preview-grid");
+if(!preview){
+preview = document.createElement("div");
+preview.id = "preview-grid";
+preview.style.display = "flex";
+preview.style.gap = "8px";
+preview.style.marginTop = "10px";
+preview.style.overflowX = "auto";
+
+input.parentNode.appendChild(preview);
+}
+
+input.addEventListener("change", function(){
+
+preview.innerHTML = "";
+
+Array.from(input.files).forEach(file => {
+
+const img = document.createElement("img");
+img.src = URL.createObjectURL(file);
+
+img.style.height = "80px";
+img.style.width = "80px";
+img.style.objectFit = "cover";
+img.style.borderRadius = "10px";
+
+preview.appendChild(img);
+
+});
+
+});
+
+});
+</script>
 </body>
 </html>
