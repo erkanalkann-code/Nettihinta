@@ -132,5 +132,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const divs = document.querySelectorAll("body > div");
+
+  divs.forEach(div => {
+    if (div.innerText.includes("←") || div.style.position === "fixed") {
+      div.style.display = "none";
+    }
+  });
+
+});
+</script>
 </body>
 </html>
