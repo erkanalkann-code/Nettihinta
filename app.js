@@ -28,7 +28,7 @@ ${deal.newPrice}€
 </a>
 
 </div>
-</div>
+</a>
 `
 })
 }
