@@ -9,13 +9,17 @@ container.innerHTML = ""
 list.forEach(deal=>{
 container.innerHTML += `
 
-<a href="${deal.link}" target="_blank" class="card">
+<div class="card">
+
+<a href="${deal.link}" target="_blank">
+
 <div class="discount">-${deal.discount}%</div>
 
 <img src="${deal.image}">
 
 <div class="info">
-<div>${deal.title}</div>
+
+<div class="title">${deal.title}</div>
 
 <div class="price">
 ${deal.newPrice}€
@@ -25,9 +29,12 @@ ${deal.newPrice}€
 <div class="store">${deal.store}</div>
 
 <div class="btn">Siirry kauppaan</div>
+
 </div>
 
 </a>
+
+</div>
 
 `
 })
