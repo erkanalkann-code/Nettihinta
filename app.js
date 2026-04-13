@@ -47,6 +47,6 @@ document
 .forEach(b=>b.classList.remove('active'))
 
 el.classList.add('active')
-render(window.deals)
 }
 
+render(data)
