@@ -9,6 +9,7 @@ filters.innerHTML = `
 <button onclick="showNew()">⚡ Uusimmat</button>
 <button onclick="showBig()">📉 Suurimmat</button>
 <button onclick="showExtra()">🔥 Lisäalennus</button>
+<button onclick="showCheap()">💰 Halvimmat</button>
 `
 
 function render(list){
@@ -52,6 +53,10 @@ window.showExtra = () =>
 render([...data]
 .sort((a,b)=>b.discount-a.discount)
 .slice(0,4))
+
+window.showCheap = () =>
+render([...data]
+.sort((a,b)=>a.newPrice-b.newPrice))
 
 render(data)
 
