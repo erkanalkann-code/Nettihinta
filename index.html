@@ -6,7 +6,6 @@
 <title>Nettihinta</title>
 
 <style>
-
 body{
 font-family:-apple-system,BlinkMacSystemFont,sans-serif;
 margin:0;
@@ -17,26 +16,6 @@ background:#f5f5f5;
 padding:20px;
 font-size:28px;
 font-weight:700;
-}
-
-.sub{
-padding:0 20px;
-color:#777;
-}
-
-.categories{
-display:flex;
-overflow:auto;
-gap:10px;
-padding:15px;
-}
-
-.cat{
-background:white;
-padding:8px 14px;
-border-radius:20px;
-white-space:nowrap;
-font-weight:600;
 }
 
 .grid{
@@ -50,7 +29,6 @@ padding:12px;
 background:white;
 border-radius:14px;
 overflow:hidden;
-box-shadow:0 2px 6px rgba(0,0,0,0.05);
 position:relative;
 }
 
@@ -63,7 +41,6 @@ color:white;
 padding:4px 8px;
 border-radius:8px;
 font-weight:700;
-font-size:13px;
 }
 
 .card img{
@@ -74,35 +51,14 @@ width:100%;
 padding:10px;
 }
 
-.store{
-display:flex;
-align-items:center;
-gap:6px;
-font-size:12px;
-color:#666;
-}
-
-.store img{
-width:16px;
-height:16px;
-}
-
-.title{
-font-weight:600;
-font-size:14px;
-margin-top:4px;
-}
-
 .price{
 font-weight:700;
-font-size:16px;
 }
 
 .old{
 text-decoration:line-through;
-color:#999;
+color:#888;
 margin-left:6px;
-font-size:13px;
 }
 
 .btn{
@@ -112,91 +68,71 @@ color:white;
 padding:8px;
 border-radius:8px;
 text-align:center;
-font-size:13px;
 }
-
-.nav{
-position:fixed;
-bottom:0;
-width:100%;
-background:white;
-display:flex;
-justify-content:space-around;
-padding:12px 0;
-border-top:1px solid #eee;
-}
-
 </style>
 </head>
 
 <body>
 
 <div class="header">Nettihinta</div>
-<div class="sub">Suomen parhaat tarjoukset</div>
 
-<div class="categories">
-<div class="cat">🔥 Kaikki</div>
-<div class="cat">⚡ Uusimmat</div>
-<div class="cat">📉 Suurimmat</div>
-<div class="cat">💻 Elektroniikka</div>
-<div class="cat">🏠 Koti</div>
-<div class="cat">👕 Muoti</div>
-</div>
+<div class="grid" id="deals"></div>
 
-<div class="grid">
+<script>
 
+const deals = [
+{
+title:"AirPods Pro",
+store:"Gigantti",
+oldPrice:299,
+newPrice:199,
+discount:33,
+image:"https://images.unsplash.com/photo-1580910051074-3eb694886505",
+link:"#"
+},
+{
+title:"iPhone 15",
+store:"Verkkokauppa",
+oldPrice:999,
+newPrice:799,
+discount:20,
+image:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+link:"#"
+}
+]
+
+const container = document.getElementById("deals")
+
+deals
+.sort((a,b)=> b.discount-a.discount)
+.forEach(deal=>{
+
+container.innerHTML += `
 <div class="card">
-<div class="discount">-33%</div>
-<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505">
+<div class="discount">-${deal.discount}%</div>
+<img src="${deal.image}">
 <div class="info">
 
-<div class="store">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Gigantti_logo.png">
-Gigantti
-</div>
-
-<div class="title">AirPods Pro</div>
+<div>${deal.title}</div>
 
 <div class="price">
-199€
-<span class="old">299€</span>
+${deal.newPrice}€
+<span class="old">${deal.oldPrice}€</span>
 </div>
 
+<div>${deal.store}</div>
+
+<a href="${deal.link}" target="_blank">
 <div class="btn">Siirry kauppaan</div>
+</a>
 
 </div>
 </div>
+`
 
-<div class="card">
-<div class="discount">-20%</div>
-<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
-<div class="info">
+})
 
-<div class="store">
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Verkkokauppa.com_logo.png">
-Verkkokauppa
-</div>
-
-<div class="title">iPhone 15</div>
-
-<div class="price">
-799€
-<span class="old">999€</span>
-</div>
-
-<div class="btn">Siirry kauppaan</div>
-
-</div>
-</div>
-
-</div>
-
-<div class="nav">
-<div>Tarjoukset</div>
-<div>Kategoriat</div>
-<div>Suosikit</div>
-<div>Profiili</div>
-</div>
+</script>
 
 </body>
 </html>
