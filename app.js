@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 const container = document.getElementById("deals")
 
 function render(data){
@@ -13,7 +15,6 @@ container.innerHTML += `
 <img src="${deal.image}">
 
 <div class="info">
-
 <div>${deal.title}</div>
 
 <div class="price">
@@ -38,15 +39,15 @@ ${deal.store}
 
 render(window.deals)
 
-function showAll(){
+window.showAll = function(){
 render(window.deals)
 }
 
-function showBig(){
+window.showBig = function(){
 render([...window.deals].sort((a,b)=>b.discount-a.discount))
 }
 
-function showNew(){
+window.showNew = function(){
 render([...window.deals].reverse())
 }
 
@@ -56,3 +57,5 @@ if(percent >= 30) return "#ff3b30"
 if(percent >= 20) return "#ff6b00"
 return "#999"
 }
+
+})
