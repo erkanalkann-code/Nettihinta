@@ -104,3 +104,15 @@ white-space:nowrap;
 background:black;
 color:white;
 }
+
+.subtitle{
+font-size:16px;
+margin:4px 0;
+color:#333;
+}
+
+.subtext{
+font-size:14px;
+color:#777;
+margin:0;
+}
