@@ -11,10 +11,9 @@ list.forEach(deal => {
 container.innerHTML += `
 <a href="${deal.link}" target="_blank" class="card">
 
-<div style="position:relative">
 <div class="discount">-${deal.discount}%</div>
+
 <img src="${deal.image}">
-</div>
 
 <div class="info">
 
@@ -45,6 +44,9 @@ render([...data].sort((a,b)=>b.discount-a.discount))
 
 window.showNew = () =>
 render([...data].reverse())
+
+window.showToday = () =>
+render([...data].slice(0,4))
 
 render(data)
 
