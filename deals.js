@@ -18,3 +18,13 @@ image:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
 link:"#"
 }
 ]
+{
+title:"AirPods Pro",
+store:"Gigantti",
+logo:"https://upload.wikimedia.org/wikipedia/commons/5/5a/Gigantti_logo.png",
+oldPrice:299,
+newPrice:199,
+discount:33,
+image:"...",
+link:"#"
+}
