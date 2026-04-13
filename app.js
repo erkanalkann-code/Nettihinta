@@ -43,9 +43,6 @@ render([...data].sort((a,b)=>b.discount-a.discount))
 window.showNew = () =>
 render([...data].reverse())
 
-window.showToday = () =>
-render(data.length > 4 ? [...data].slice(-4) : data)
-  
 function setActive(el){
 document
 .querySelectorAll('.filters button')
