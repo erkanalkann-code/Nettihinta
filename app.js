@@ -44,3 +44,6 @@ window.showNew = () =>
 render([...data].reverse())
 
 })
+window.showStore = function(store){
+render(window.deals.filter(d => d.store === store))
+}
