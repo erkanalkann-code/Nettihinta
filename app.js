@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 const container = document.getElementById("deals")
-
 const data = window.deals || []
 
 function render(list){
