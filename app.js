@@ -7,7 +7,6 @@ function render(list){
 container.innerHTML = ""
 
 list.forEach(deal => {
-
 container.innerHTML += `
 <a href="${deal.link}" target="_blank" class="card">
 
@@ -16,7 +15,6 @@ container.innerHTML += `
 <img src="${deal.image}">
 
 <div class="info">
-
 <div class="title">${deal.title}</div>
 
 <div class="price">
@@ -27,14 +25,11 @@ ${deal.newPrice}€
 <div class="store">${deal.store}</div>
 
 <div class="btn">Siirry kauppaan</div>
-
 </div>
 
 </a>
 `
-
 })
-
 }
 
 window.showAll = () => render(data)
