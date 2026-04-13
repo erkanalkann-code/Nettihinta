@@ -50,3 +50,4 @@ el.classList.add('active')
 }
 
 render(data)
+})
