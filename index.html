@@ -12,18 +12,17 @@
 
 <div class="header">Nettihinta</div>
 <div class="filters">
-<button onclick="showAll()">🔥 Kaikki</button>
-<button onclick="showNew()">⚡ Uusimmat</button>
-<button onclick="showBig()">📉 Suurimmat</button>
-<button onclick="showCategory('Elektroniikka')">📱 Elektroniikka</button>
-
-<button onclick="showStore('Gigantti')">Gigantti</button>
-<button onclick="showStore('Power')">Power</button>
-<button onclick="showStore('Verkkokauppa')">Verkkokauppa</button>
+<button onclick="setActive(this);showAll()">🔥 Kaikki</button>
+<button onclick="setActive(this);showNew()">⚡ Uusimmat</button>
+<button onclick="setActive(this);showBig()">📉 Suurimmat</button>
+<button onclick="setActive(this);showCategory('Elektroniikka')">📱 Elektroniikka</button>
+<button onclick="setActive(this);showStore('Gigantti')">Gigantti</button>
+<button onclick="setActive(this);showStore('Power')">Power</button>
+<button onclick="setActive(this);showStore('Verkkokauppa')">Verkkokauppa</button>
 </div>
 <div class="grid" id="deals"></div>
 
-  <script src="deals.js"></script>
+<script src="deals.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
