@@ -53,3 +53,5 @@ document
 
 el.classList.add('active')
 }
+
+showAll()
