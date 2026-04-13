@@ -28,3 +28,14 @@ ${deal.newPrice}€
 `
 
 })
+function showAll(){
+render(window.deals)
+}
+
+function showBig(){
+render([...window.deals].sort((a,b)=>b.discount-a.discount))
+}
+
+function showNew(){
+render([...window.deals].reverse())
+}
