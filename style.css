@@ -5,9 +5,8 @@ margin:0;
 padding:16px;
 }
 
-h1{
-font-size:32px;
-margin:0 0 6px 0;
+img{
+display:block;
 }
 
 .subtitle{
@@ -42,10 +41,8 @@ color:#333;
 }
 
 .filters button.active{
-background:black !important;
-color:white !important;
-transform:translateY(-2px);
-box-shadow:0 4px 10px rgba(0,0,0,0.15);
+background:black;
+color:white;
 }
 
 .grid{
@@ -88,16 +85,19 @@ padding:10px;
 .title{
 font-weight:700;
 margin-bottom:4px;
+font-size:16px;
 }
 
 .price{
 font-weight:700;
+font-size:18px;
 }
 
 .old{
 text-decoration:line-through;
 color:#999;
 margin-left:6px;
+font-weight:500;
 }
 
 .store{
