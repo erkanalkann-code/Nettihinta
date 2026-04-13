@@ -51,4 +51,4 @@ document
 el.classList.add('active')
 }
 
-showAll()
+render(window.deals)
