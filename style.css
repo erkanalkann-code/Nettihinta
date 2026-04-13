@@ -52,27 +52,28 @@ background:black;
 color:white;
 }
 
+/* GRID */
 .grid{
-padding:0 16px 40px 16px;
-display:flex;
-flex-direction:column;
-gap:16px;
+padding:0 12px 40px 12px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
 }
 
+/* CARD */
 .card{
-display:flex;
-gap:12px;
 background:white;
 border-radius:16px;
-padding:12px;
+padding:10px;
 text-decoration:none;
 color:inherit;
 position:relative;
+display:block;
 }
 
 .card img{
-width:120px;
-height:120px;
+width:100%;
+aspect-ratio:1/1;
 object-fit:cover;
 border-radius:12px;
 }
@@ -83,42 +84,44 @@ left:8px;
 top:8px;
 background:#ff3b30;
 color:white;
-padding:6px 10px;
-border-radius:10px;
+padding:4px 8px;
+border-radius:8px;
 font-weight:700;
-font-size:14px;
+font-size:12px;
 }
 
 .info{
-flex:1;
 display:flex;
 flex-direction:column;
-gap:6px;
+gap:4px;
+margin-top:6px;
 }
 
 .price{
-font-size:22px;
+font-size:16px;
 font-weight:700;
 }
 
 .old{
 color:#999;
 text-decoration:line-through;
-margin-left:6px;
+margin-left:4px;
 font-weight:500;
+font-size:14px;
 }
 
 .store{
 color:#888;
-font-size:14px;
+font-size:12px;
 }
 
 .btn{
-margin-top:auto;
+margin-top:6px;
 background:black;
 color:white;
-padding:10px;
-border-radius:12px;
+padding:8px;
+border-radius:10px;
 text-align:center;
 font-weight:600;
+font-size:14px;
 }
