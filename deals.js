@@ -48,7 +48,7 @@ category:"Elektroniikka",
 oldPrice:79,
 newPrice:49,
 discount:38,
-image:"https://images.unsplash.com/photo-1620336655055-b57986f6c7c1?q=80&w=1200",
+image:"https://images.unsplash.com/photo-1583316174775-bd6dc0e9f298?q=80&w=1200&auto=format&fit=crop",
 link:"https://www.tokmanni.fi/search/?q=braun%20series%205"
 }
 ]
