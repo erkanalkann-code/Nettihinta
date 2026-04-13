@@ -1,4 +1,4 @@
-const deals = [
+const container = document.getElementById("deals")
 {
 title:"AirPods Pro",
 store:"Gigantti",
