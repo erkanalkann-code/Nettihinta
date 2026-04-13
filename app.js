@@ -1,9 +1,9 @@
 const container = document.getElementById("deals")
 
-window.deals
-.sort((a,b)=> b.discount-a.discount)
-.forEach(deal=>{
+function render(data){
+container.innerHTML = ""
 
+data.forEach(deal=>{
 container.innerHTML += `
 <div class="card">
 <div class="discount">-${deal.discount}%</div>
@@ -26,8 +26,11 @@ ${deal.newPrice}€
 </div>
 </div>
 `
-
 })
+}
+
+render(window.deals)
+
 function showAll(){
 render(window.deals)
 }
