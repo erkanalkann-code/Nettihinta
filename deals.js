@@ -1,4 +1,4 @@
-const deals = [
+window.deals = [
 {
 title:"AirPods Pro",
 store:"Gigantti",
