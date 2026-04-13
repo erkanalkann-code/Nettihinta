@@ -37,7 +37,7 @@ category:"Koti",
 oldPrice:199,
 newPrice:129,
 discount:35,
-image:"https://images.unsplash.com/photo-1585238342028-4b5d7f6c3f0e",
+image:"https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=1200",
 link:"https://www.prisma.fi/search?query=airfryer"
 }
 ]
