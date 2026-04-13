@@ -26,13 +26,14 @@ display:flex;
 gap:8px;
 margin:14px 0;
 overflow:auto;
+padding-bottom:4px;
 }
 
 .filters button{
 border:none;
 background:#eee;
-padding:8px 14px;
-border-radius:20px;
+padding:10px 16px;
+border-radius:22px;
 font-weight:600;
 white-space:nowrap;
 cursor:pointer;
@@ -42,7 +43,8 @@ transition:all .2s ease;
 .filters button.active{
 background:black;
 color:white;
-transform:scale(1.02);
+transform:translateY(-2px);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
 .grid{
@@ -58,6 +60,7 @@ overflow:hidden;
 text-decoration:none;
 color:black;
 display:block;
+position:relative;
 }
 
 .card img{
