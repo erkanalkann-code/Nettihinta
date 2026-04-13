@@ -1,7 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 const container = document.getElementById("deals")
+const filters = document.getElementById("filters")
 const data = window.deals || []
+
+filters.innerHTML = `
+<button onclick="showAll()" class="active">🔥 Kaikki</button>
+<button onclick="showNew()">⚡ Uusimmat</button>
+<button onclick="showBig()">📉 Suurimmat</button>
+<button onclick="showExtra()">🔥 Lisäalennus</button>
+`
 
 function render(list){
 container.innerHTML = ""
@@ -25,8 +33,8 @@ ${deal.newPrice}€
 <div class="store">${deal.store}</div>
 
 <div class="btn">Siirry kauppaan</div>
-
 </div>
+
 </a>
 `
 })
