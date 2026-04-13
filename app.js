@@ -6,7 +6,9 @@ container.innerHTML = ""
 data.forEach(deal=>{
 container.innerHTML += `
 <div class="card">
-<div class="discount">-${deal.discount}%</div>
+<div class="discount" style="background:${getColor(deal.discount)}">
+-${deal.discount}%
+</div>
 <img src="${deal.image}">
 <div class="info">
 
@@ -41,4 +43,12 @@ render([...window.deals].sort((a,b)=>b.discount-a.discount))
 
 function showNew(){
 render([...window.deals].reverse())
+}
+function getColor(percent){
+
+if(percent >= 50) return "#ff0000"
+if(percent >= 30) return "#ff3b30"
+if(percent >= 20) return "#ff6b00"
+return "#999"
+
 }
