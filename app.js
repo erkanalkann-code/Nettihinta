@@ -27,7 +27,6 @@ ${deal.newPrice}€
 <div class="btn">Siirry kauppaan</div>
 
 </div>
-
 </a>
 `
 })
