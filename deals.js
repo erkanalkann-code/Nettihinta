@@ -29,4 +29,15 @@ discount:25,
 image:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
 link:"https://www.power.fi/search/?q=sony%20wh-1000xm5"
 }
+,
+{
+title:"Philips Airfryer XXL",
+store:"Prisma",
+category:"Koti",
+oldPrice:199,
+newPrice:129,
+discount:35,
+image:"https://images.unsplash.com/photo-1585238342028-4b5d7f6c3f0e",
+link:"https://www.prisma.fi/search?query=airfryer"
+}
 ]
