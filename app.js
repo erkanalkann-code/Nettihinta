@@ -5,12 +5,19 @@ const filters = document.getElementById("filters")
 const data = window.deals || []
 
 filters.innerHTML = `
-<button onclick="showAll()" class="active">🔥 Kaikki</button>
-<button onclick="showNew()">⚡ Uusimmat</button>
-<button onclick="showBig()">📉 Suurimmat</button>
-<button onclick="showExtra()">🔥 Lisäalennus</button>
-<button onclick="showCheap()">💰 Halvimmat</button>
+<button onclick="showAll(this)" class="active">🔥 Kaikki</button>
+<button onclick="showNew(this)">⚡ Uusimmat</button>
+<button onclick="showBig(this)">📉 Suurimmat</button>
+<button onclick="showExtra(this)">🔥 Lisäalennus</button>
+<button onclick="showCheap(this)">💰 Halvimmat</button>
 `
+
+function setActive(btn){
+document.querySelectorAll(".filters button")
+.forEach(b => b.classList.remove("active"))
+
+btn.classList.add("active")
+}
 
 function render(list){
 container.innerHTML = ""
@@ -41,22 +48,33 @@ ${deal.newPrice}€
 })
 }
 
-window.showAll = () => render(data)
+window.showAll = (btn) => {
+setActive(btn)
+render(data)
+}
 
-window.showNew = () =>
+window.showNew = (btn) => {
+setActive(btn)
 render([...data].reverse())
+}
 
-window.showBig = () =>
+window.showBig = (btn) => {
+setActive(btn)
 render([...data].sort((a,b)=>b.discount-a.discount))
+}
 
-window.showExtra = () =>
+window.showExtra = (btn) => {
+setActive(btn)
 render([...data]
 .sort((a,b)=>b.discount-a.discount)
 .slice(0,4))
+}
 
-window.showCheap = () =>
+window.showCheap = (btn) => {
+setActive(btn)
 render([...data]
 .sort((a,b)=>a.newPrice-b.newPrice))
+}
 
 render(data)
 
