@@ -7,25 +7,14 @@ padding:16px;
 
 img{
 display:block;
-}
-
-.subtitle{
-font-size:18px;
-color:#333;
-margin:0 0 4px 0;
-}
-
-.subtext{
-color:#777;
-margin:2px 0;
+margin-bottom:8px;
 }
 
 .filters{
 display:flex;
 gap:8px;
-margin:14px 0;
+margin:8px 0 14px 0;
 overflow:auto;
-padding-bottom:4px;
 }
 
 .filters button{
@@ -36,7 +25,6 @@ border-radius:22px;
 font-weight:600;
 white-space:nowrap;
 cursor:pointer;
-transition:all .2s ease;
 color:#333;
 }
 
@@ -97,7 +85,6 @@ font-size:18px;
 text-decoration:line-through;
 color:#999;
 margin-left:6px;
-font-weight:500;
 }
 
 .store{
