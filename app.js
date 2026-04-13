@@ -46,8 +46,6 @@ render([...data].reverse())
   window.showToday = () =>
 render([...data].slice(-4))
   
-})
-
 function setActive(el){
 document
 .querySelectorAll('.filters button')
