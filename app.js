@@ -1,81 +1,117 @@
-document.addEventListener("DOMContentLoaded", () => {
-
-const container = document.getElementById("deals")
-const filters = document.getElementById("filters")
-const data = window.deals || []
-
-filters.innerHTML = `
-<button class="active">🔥 Kaikki</button>
-<button>⚡ Uusimmat</button>
-<button>📉 Suurimmat</button>
-<button>🔥 Lisäalennus</button>
-<button>💰 Halvimmat</button>
-`
-
-const buttons = filters.querySelectorAll("button")
-
-function setActive(index){
-buttons.forEach(b => b.classList.remove("active"))
-buttons[index].classList.add("active")
+body{
+font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;
+background:#f5f5f7;
+margin:0;
+padding:16px;
 }
 
-function render(list){
-container.innerHTML = ""
-
-list.forEach(deal => {
-container.innerHTML += `
-<a href="${deal.link}" target="_blank" class="card">
-
-<div class="discount">-${deal.discount}%</div>
-
-<img src="${deal.image}">
-
-<div class="info">
-<div class="title">${deal.title}</div>
-
-<div class="price">
-${deal.newPrice}€
-<span class="old">${deal.oldPrice}€</span>
-</div>
-
-<div class="store">${deal.store}</div>
-
-<div class="btn">Siirry kauppaan</div>
-</div>
-
-</a>
-`
-})
+img{
+display:block;
 }
 
-buttons[0].onclick = () => {
-setActive(0)
-render(data)
+.subtitle{
+font-size:18px;
+color:#333;
+margin:0 0 4px 0;
 }
 
-buttons[1].onclick = () => {
-setActive(1)
-render([...data].reverse())
+.subtext{
+color:#777;
+margin:2px 0;
 }
 
-buttons[2].onclick = () => {
-setActive(2)
-render([...data].sort((a,b)=>b.discount-a.discount))
+.filters{
+display:flex;
+gap:8px;
+margin:14px 0;
+overflow:auto;
+padding-bottom:4px;
 }
 
-buttons[3].onclick = () => {
-setActive(3)
-render([...data]
-.sort((a,b)=>b.discount-a.discount)
-.slice(0,4))
+.filters button{
+border:none;
+background:#eee;
+padding:10px 16px;
+border-radius:22px;
+font-weight:600;
+white-space:nowrap;
+cursor:pointer;
+transition:all .2s ease;
+color:#333;
 }
 
-buttons[4].onclick = () => {
-setActive(4)
-render([...data]
-.sort((a,b)=>a.newPrice-b.newPrice))
+.filters button.active{
+background:black;
+color:white;
 }
 
-render(data)
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
 
-})
+.card{
+background:white;
+border-radius:16px;
+overflow:hidden;
+text-decoration:none;
+color:black;
+display:block;
+position:relative;
+}
+
+.card img{
+width:100%;
+height:150px;
+object-fit:cover;
+}
+
+.discount{
+position:absolute;
+background:red;
+color:white;
+padding:4px 8px;
+border-radius:8px;
+margin:8px;
+font-size:12px;
+font-weight:600;
+}
+
+.info{
+padding:10px;
+}
+
+.title{
+font-weight:700;
+margin-bottom:4px;
+font-size:16px;
+}
+
+.price{
+font-weight:700;
+font-size:18px;
+}
+
+.old{
+text-decoration:line-through;
+color:#999;
+margin-left:6px;
+font-weight:500;
+}
+
+.store{
+font-size:12px;
+color:#777;
+margin-top:4px;
+}
+
+.btn{
+background:black;
+color:white;
+padding:10px;
+text-align:center;
+border-radius:12px;
+margin-top:8px;
+font-weight:600;
+}
