@@ -9,7 +9,7 @@
 
 <body>
 
-<h1>Nettihinta</h1>
+<img src="logo.png" style="height:32px;margin-bottom:8px;">
 
 <p class="subtitle">
 Haluatko nähdä Suomen kaikki alennukset yhdessä paikassa?
@@ -23,7 +23,14 @@ Seuraamme tarjouksia puolestasi.
 Kaikki hinnat tulevat suoraan kaupoista. Klikkaa ja siirry kauppaan.
 </p>
 
-<div id="filters" class="filters"></div>
+<div class="filters" id="filters">
+<button onclick="showAll()" class="active">🔥 Kaikki</button>
+<button onclick="showNew()">⚡ Uusimmat</button>
+<button onclick="showBig()">📉 Suurimmat</button>
+<button onclick="showExtra()">🔥 Lisäalennus</button>
+<button onclick="showCheap()">💰 Halvimmat</button>
+</div>
+
 <div id="deals" class="grid"></div>
 
 <script src="deals.js"></script>
