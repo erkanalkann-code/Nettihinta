@@ -1,5 +1,3 @@
-<script>
-
 const deals = [
 {
 title:"AirPods Pro",
@@ -40,7 +38,7 @@ ${deal.newPrice}€
 <span class="old">${deal.oldPrice}€</span>
 </div>
 
-<div>${deal.store}</div>
+<div class="store">${deal.store}</div>
 
 <a href="${deal.link}" target="_blank">
 <div class="btn">Siirry kauppaan</div>
@@ -51,5 +49,3 @@ ${deal.newPrice}€
 `
 
 })
-
-</script>
