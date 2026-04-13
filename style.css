@@ -112,3 +112,6 @@ gap:12px;
 .card img{
 height:110px;
 }
+a.card{
+display:block;
+}
