@@ -100,3 +100,7 @@ padding:12px;
 .filters button{
 white-space:nowrap;
 }
+.filters button.active{
+background:black;
+color:white;
+}
