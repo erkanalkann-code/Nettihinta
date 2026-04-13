@@ -40,4 +40,15 @@ discount:35,
 image:"https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=1200",
 link:"https://www.prisma.fi/search?query=airfryer"
 }
+,
+{
+title:"Braun Series 5 Parranajokone",
+store:"Tokmanni",
+category:"Elektroniikka",
+oldPrice:79,
+newPrice:49,
+discount:38,
+image:"https://images.unsplash.com/photo-1583947582886-f40ec95dd752?q=80&w=1200",
+link:"https://www.tokmanni.fi/search/?q=braun%20series%205"
+}
 ]
