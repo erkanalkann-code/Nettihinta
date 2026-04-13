@@ -90,3 +90,13 @@ height:16px;
 margin-right:6px;
 vertical-align:middle;
 }
+.filters{
+display:flex;
+gap:8px;
+overflow-x:auto;
+padding:12px;
+}
+
+.filters button{
+white-space:nowrap;
+}
