@@ -20,7 +20,7 @@ ${deal.newPrice}€
 </div>
 
 <div class="store">
-<img class="logo" src="${deal.logo}">
+${deal.logo ? `<img class="logo" src="${deal.logo}">` : ""}
 ${deal.store}
 </div>
 
