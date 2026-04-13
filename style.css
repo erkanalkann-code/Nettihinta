@@ -54,30 +54,30 @@ color:white;
 
 /* GRID */
 .grid{
-padding:0 12px 40px 12px;
+padding:0 10px 40px 10px;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:12px;
+gap:14px;
 }
 
 /* CARD */
 .card{
 background:white;
 border-radius:16px;
-padding:10px;
+overflow:hidden;
 text-decoration:none;
 color:inherit;
 position:relative;
-display:block;
 }
 
+/* IMAGE */
 .card img{
 width:100%;
-aspect-ratio:1/1;
+aspect-ratio:1/1.1;
 object-fit:cover;
-border-radius:12px;
 }
 
+/* DISCOUNT */
 .discount{
 position:absolute;
 left:8px;
@@ -90,13 +90,22 @@ font-weight:700;
 font-size:12px;
 }
 
+/* INFO */
 .info{
+padding:10px;
 display:flex;
 flex-direction:column;
 gap:4px;
-margin-top:6px;
 }
 
+/* TITLE */
+.info div:first-child{
+font-size:14px;
+font-weight:600;
+line-height:1.2;
+}
+
+/* PRICE */
 .price{
 font-size:16px;
 font-weight:700;
@@ -107,7 +116,7 @@ color:#999;
 text-decoration:line-through;
 margin-left:4px;
 font-weight:500;
-font-size:14px;
+font-size:13px;
 }
 
 .store{
@@ -115,13 +124,7 @@ color:#888;
 font-size:12px;
 }
 
+/* BUTTON HIDDEN */
 .btn{
-margin-top:6px;
-background:black;
-color:white;
-padding:8px;
-border-radius:10px;
-text-align:center;
-font-weight:600;
-font-size:14px;
+display:none;
 }
