@@ -38,11 +38,12 @@ font-weight:600;
 white-space:nowrap;
 cursor:pointer;
 transition:all .2s ease;
+color:#333;
 }
 
 .filters button.active{
-background:black;
-color:white;
+background:black !important;
+color:white !important;
 transform:translateY(-2px);
 box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
