@@ -7,7 +7,7 @@ oldPrice:299,
 newPrice:199,
 discount:33,
 image:"https://images.unsplash.com/photo-1580910051074-3eb694886505",
-link:"#"
+link:"https://www.gigantti.fi/search?q=airpods%20pro"
 },
 {
 title:"iPhone 15",
@@ -17,7 +17,7 @@ oldPrice:999,
 newPrice:799,
 discount:20,
 image:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
-link:"#"
+link:"https://www.verkkokauppa.com/fi/search?query=iphone%2015"
 },
 {
 title:"Sony WH-1000XM5",
@@ -27,6 +27,6 @@ oldPrice:399,
 newPrice:299,
 discount:25,
 image:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
-link:"#"
+link:"https://www.power.fi/search/?q=sony%20wh-1000xm5"
 }
 ]
