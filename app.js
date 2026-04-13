@@ -21,7 +21,7 @@ link:"#"
 
 const container = document.getElementById("deals")
 
-deals
+window.deals
 .sort((a,b)=> b.discount-a.discount)
 .forEach(deal=>{
 
