@@ -47,3 +47,10 @@ render([...data].reverse())
 window.showStore = function(store){
 render(window.deals.filter(d => d.store === store))
 }
+function setActive(el){
+document
+.querySelectorAll('.filters button')
+.forEach(b=>b.classList.remove('active'))
+
+el.classList.add('active')
+}
