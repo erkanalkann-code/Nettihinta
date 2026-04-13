@@ -33,8 +33,6 @@ ${deal.newPrice}€
 })
 }
 
-render(data)
-
 window.showAll = () => render(data)
 
 window.showBig = () =>
