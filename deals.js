@@ -18,5 +18,15 @@ newPrice:799,
 discount:20,
 image:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
 link:"#"
+},
+{
+title:"Sony WH-1000XM5",
+store:"Power",
+category:"Elektroniikka",
+oldPrice:399,
+newPrice:299,
+discount:25,
+image:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+link:"#"
 }
 ]
