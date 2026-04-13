@@ -48,5 +48,8 @@ document
 el.classList.add('active')
 }
 
+window.setActive = setActive
+
 render(data)
+
 })
