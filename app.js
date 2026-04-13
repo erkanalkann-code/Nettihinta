@@ -8,12 +8,11 @@ container.innerHTML = ""
 
 list.forEach(deal=>{
 container.innerHTML += `
-<div class="card">
 
-<div style="position:relative">
+<a href="${deal.link}" target="_blank" class="card">
 <div class="discount">-${deal.discount}%</div>
+
 <img src="${deal.image}">
-</div>
 
 <div class="info">
 <div>${deal.title}</div>
@@ -24,17 +23,17 @@ ${deal.newPrice}€
 </div>
 
 <div class="store">${deal.store}</div>
+
+<div class="btn">Siirry kauppaan</div>
 </div>
 
-<a href="${deal.link}" target="_blank">
-<div class="btn">Siirry kauppaan</div>
 </a>
 
-</div>
 `
 })
-
 }
+
+render(data)
 
 window.showAll = () => render(data)
 
@@ -44,14 +43,12 @@ render([...data].sort((a,b)=>b.discount-a.discount))
 window.showNew = () =>
 render([...data].reverse())
 
-window.setActive = function(el){
+})
+
+function setActive(el){
 document
 .querySelectorAll('.filters button')
 .forEach(b=>b.classList.remove('active'))
 
 el.classList.add('active')
 }
-
-render(data)
-
-})
