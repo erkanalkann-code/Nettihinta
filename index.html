@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nettihinta</title>
 
-<link rel="stylesheet" href="./style2.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -18,20 +18,24 @@ Haluatko nähdä Suomen kaikki alennukset yhdessä paikassa?
 </p>
 
 <p class="subtext">
-Seuraamme tarjouksia puolestasi. Kaikki hinnat tulevat suoraan kaupoista.
+Seuraamme tarjouksia puolestasi.
 </p>
+
+<span class="subtext">
+Kaikki hinnat tulevat suoraan kaupoista. Klikkaa ja siirry kauppaan.
+</span>
 </div>
 
 <div class="filters">
-<button onclick="setActive(this);showAll()">🔥 Kaikki</button>
+<button onclick="setActive(this);showAll()" class="active">🔥 Kaikki</button>
 <button onclick="setActive(this);showNew()">⚡ Uusimmat</button>
 <button onclick="setActive(this);showBig()">📉 Suurimmat</button>
 </div>
 
-<div id="deals" class="grid"></div>
+<div class="grid" id="deals"></div>
 
-<script src="./deals.js"></script>
-<script src="./app.js"></script>
+<script src="deals.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>
