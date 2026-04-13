@@ -9,7 +9,7 @@ container.innerHTML = ""
 
 list.forEach(deal=>{
 container.innerHTML += `
-<div class="card">
+<a href="${deal.link}" target="_blank" class="card">
 <div class="discount">-${deal.discount}%</div>
 <img src="${deal.image}">
 <div class="info">
