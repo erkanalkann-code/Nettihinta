@@ -9,10 +9,13 @@ container.innerHTML = ""
 list.forEach(deal=>{
 container.innerHTML += `
 <a href="${deal.link}" target="_blank" class="card">
+
+<div style="position:relative">
 <div class="discount">-${deal.discount}%</div>
 <img src="${deal.image}">
-<div class="info">
+</div>
 
+<div class="info">
 <div>${deal.title}</div>
 
 <div class="price">
@@ -21,15 +24,14 @@ ${deal.newPrice}€
 </div>
 
 <div class="store">${deal.store}</div>
-
-<a href="${deal.link}" target="_blank">
-<div class="btn">Siirry kauppaan</div>
-</a>
-
 </div>
+
+<div class="btn">Siirry kauppaan</div>
+
 </a>
 `
 })
+
 }
 
 window.showAll = () => render(data)
