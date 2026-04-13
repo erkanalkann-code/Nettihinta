@@ -6,16 +6,15 @@ const data = window.deals || []
 function render(list){
 container.innerHTML = ""
 
-list.forEach(deal=>{
+list.forEach(deal => {
+
 container.innerHTML += `
+<a href="${deal.link}" target="_blank" class="card">
 
-<div class="card">
-
-<a href="${deal.link}" target="_blank">
-
+<div style="position:relative">
 <div class="discount">-${deal.discount}%</div>
-
 <img src="${deal.image}">
+</div>
 
 <div class="info">
 
@@ -33,14 +32,11 @@ ${deal.newPrice}€
 </div>
 
 </a>
-
-</div>
-
 `
-})
-}
 
-render(data)
+})
+
+}
 
 window.showAll = () => render(data)
 
@@ -50,12 +46,6 @@ render([...data].sort((a,b)=>b.discount-a.discount))
 window.showNew = () =>
 render([...data].reverse())
 
+render(data)
+
 })
-
-function setActive(el){
-document
-.querySelectorAll('.filters button')
-.forEach(b=>b.classList.remove('active'))
-
-el.classList.add('active')
-}
