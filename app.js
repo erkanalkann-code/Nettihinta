@@ -19,7 +19,10 @@ ${deal.newPrice}€
 <span class="old">${deal.oldPrice}€</span>
 </div>
 
-<div class="store">${deal.store}</div>
+<div class="store">
+<img class="logo" src="${deal.logo}">
+${deal.store}
+</div>
 
 <a href="${deal.link}" target="_blank">
 <div class="btn">Siirry kauppaan</div>
