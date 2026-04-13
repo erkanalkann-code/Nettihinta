@@ -1,117 +1,66 @@
-body{
-font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;
-background:#f5f5f7;
-margin:0;
-padding:16px;
+function setActive(btn){
+document.querySelectorAll(".filters button")
+.forEach(b=>b.classList.remove("active"))
+btn.classList.add("active")
 }
 
-img{
-display:block;
+function showAll(){
+setActive(event.target)
+render(deals)
 }
 
-.subtitle{
-font-size:18px;
-color:#333;
-margin:0 0 4px 0;
+function showNew(){
+setActive(event.target)
+render([...deals].reverse())
 }
 
-.subtext{
-color:#777;
-margin:2px 0;
+function showBig(){
+setActive(event.target)
+render([...deals].sort((a,b)=>b.discount-a.discount))
 }
 
-.filters{
-display:flex;
-gap:8px;
-margin:14px 0;
-overflow:auto;
-padding-bottom:4px;
+function showExtra(){
+setActive(event.target)
+render(
+[...deals]
+.filter(d=>d.discount>=30)
+.sort((a,b)=>b.discount-a.discount)
+)
 }
 
-.filters button{
-border:none;
-background:#eee;
-padding:10px 16px;
-border-radius:22px;
-font-weight:600;
-white-space:nowrap;
-cursor:pointer;
-transition:all .2s ease;
-color:#333;
+function showCheap(){
+setActive(event.target)
+render([...deals].sort((a,b)=>a.price-b.price))
 }
 
-.filters button.active{
-background:black;
-color:white;
+function render(list){
+const el=document.getElementById("deals")
+el.innerHTML=""
+
+list.forEach(d=>{
+el.innerHTML+=`
+<a class="card" href="${d.link}" target="_blank">
+
+<div class="discount">-${d.discount}%</div>
+
+<img src="${d.image}">
+
+<div class="info">
+<div class="title">${d.title}</div>
+
+<div class="price">
+${d.price}€
+<span class="old">${d.old}€</span>
+</div>
+
+<div class="store">${d.store}</div>
+
+<div class="btn">Siirry kauppaan</div>
+</div>
+
+</a>
+`
+})
 }
 
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
-}
-
-.card{
-background:white;
-border-radius:16px;
-overflow:hidden;
-text-decoration:none;
-color:black;
-display:block;
-position:relative;
-}
-
-.card img{
-width:100%;
-height:150px;
-object-fit:cover;
-}
-
-.discount{
-position:absolute;
-background:red;
-color:white;
-padding:4px 8px;
-border-radius:8px;
-margin:8px;
-font-size:12px;
-font-weight:600;
-}
-
-.info{
-padding:10px;
-}
-
-.title{
-font-weight:700;
-margin-bottom:4px;
-font-size:16px;
-}
-
-.price{
-font-weight:700;
-font-size:18px;
-}
-
-.old{
-text-decoration:line-through;
-color:#999;
-margin-left:6px;
-font-weight:500;
-}
-
-.store{
-font-size:12px;
-color:#777;
-margin-top:4px;
-}
-
-.btn{
-background:black;
-color:white;
-padding:10px;
-text-align:center;
-border-radius:12px;
-margin-top:8px;
-font-weight:600;
-}
+render(deals)
