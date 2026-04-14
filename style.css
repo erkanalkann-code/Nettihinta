@@ -5,27 +5,19 @@ margin:0;
 padding:16px;
 }
 
-.logo{
-width:100%;
-max-width:340px;
-margin-bottom:8px;
+.header{
+margin-bottom:12px;
 }
 
-.logo img{
-width:100%;
-height:auto;
-display:block;
+.logo-text{
+font-size:34px;
+font-weight:800;
 }
 
-.subtitle{
-font-size:18px;
-color:#333;
-margin:0 0 4px 0;
-}
-
-.subtext{
+.logo-sub{
 color:#777;
-margin:2px 0;
+margin-top:4px;
+font-size:14px;
 }
 
 .filters{
