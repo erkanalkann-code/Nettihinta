@@ -165,23 +165,30 @@ transform:rotate(-20deg);
 }
 
 .logo-icon{
-width:24px;
+width:26px;
 height:16px;
 background:#111;
-border-radius:3px;
 position:relative;
-transform:rotate(-25deg);
+clip-path:polygon(
+0% 20%,
+70% 20%,
+100% 50%,
+70% 80%,
+0% 80%
+);
+transform:rotate(-20deg);
+margin-right:6px;
 }
 
 .logo-icon:before{
 content:"";
 position:absolute;
-width:5px;
-height:5px;
-background:white;
+width:4px;
+height:4px;
+background:#fff;
 border-radius:50%;
-left:3px;
-top:5px;
+left:5px;
+top:6px;
 }
 
 .logo-text{
