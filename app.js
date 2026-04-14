@@ -22,9 +22,7 @@ render([...deals].sort((a,b)=>b.discount-a.discount))
 function showExtra(){
 setActive(event.target)
 render(
-[...deals]
-.filter(d=>d.discount>=30)
-.sort((a,b)=>b.discount-a.discount)
+[...deals].filter(d=>d.discount>=30)
 )
 }
 
@@ -50,7 +48,7 @@ el.innerHTML+=`
 
 <div class="price">
 ${d.price}€
-<span class="old">${d.old}€</span>
+<span class="old">${d.oldPrice}€</span>
 </div>
 
 <div class="store">${d.store}</div>
