@@ -48,7 +48,7 @@ el.innerHTML+=`
 
 <div class="price">
 ${d.price}€
-<span class="old">${d.oldPrice}€</span>
+<span class="old">${d.old}€</span>
 </div>
 
 <div class="store">${d.store}</div>
