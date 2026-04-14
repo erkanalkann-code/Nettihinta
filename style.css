@@ -9,18 +9,10 @@ padding:16px;
 margin-bottom:12px;
 }
 
-.logo-text{
-display:flex;
-align-items:center;
-gap:8px;
-font-size:34px;
-font-weight:800;
-}
-
-.logo-svg{
-width:34px;
-height:34px;
-margin-right:6px;
+.logo-full{
+width:220px;
+display:block;
+margin-bottom:4px;
 }
 
 .logo-sub{
