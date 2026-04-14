@@ -6,16 +6,13 @@ padding:16px;
 }
 
 .header{
-display:flex;
-flex-direction:column;
-gap:2px;
 margin-bottom:12px;
 }
 
-.logo-full{
-width:260px;
+.logo{
+width:210px;
 display:block;
-margin-bottom:6px;
+margin-bottom:4px;
 }
 
 .logo-sub{
