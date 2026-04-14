@@ -164,15 +164,24 @@ position:relative;
 transform:rotate(-20deg);
 }
 
+.logo-icon{
+width:24px;
+height:16px;
+background:#111;
+border-radius:3px;
+position:relative;
+transform:rotate(-25deg);
+}
+
 .logo-icon:before{
 content:"";
 position:absolute;
-width:6px;
-height:6px;
+width:5px;
+height:5px;
 background:white;
 border-radius:50%;
 left:3px;
-top:6px;
+top:5px;
 }
 
 .logo-text{
