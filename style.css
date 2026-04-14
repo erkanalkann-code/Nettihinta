@@ -10,8 +10,19 @@ margin-bottom:12px;
 }
 
 .logo-text{
+display:flex;
+align-items:center;
+gap:8px;
 font-size:34px;
 font-weight:800;
+}
+
+.logo-icon{
+width:18px;
+height:18px;
+background:#9BE000;
+border-radius:3px;
+display:inline-block;
 }
 
 .logo-sub{
