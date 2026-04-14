@@ -21,14 +21,12 @@ render([...deals].sort((a,b)=>b.discount-a.discount))
 
 function showExtra(){
 setActive(event.target)
-render(
-[...deals].filter(d=>d.discount>=30)
-)
+render([...deals].filter(d=>d.discount>=30))
 }
 
 function showCheap(){
 setActive(event.target)
-render([...deals].sort((a,b)=>a.price-b.price))
+render([...deals].sort((a,b)=>a.newPrice-b.newPrice))
 }
 
 function render(list){
@@ -47,8 +45,8 @@ el.innerHTML+=`
 <div class="title">${d.title}</div>
 
 <div class="price">
-${d.price}€
-<span class="old">${d.old}€</span>
+${d.newPrice}€
+<span class="old">${d.oldPrice}€</span>
 </div>
 
 <div class="store">${d.store}</div>
